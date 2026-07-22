@@ -18,10 +18,11 @@ Each risk finding is rated on three factors, each on a 1–5 scale:
 
 ### The formula
 
+```
 Inherent Risk = Likelihood x Impact
 Reduction Factor = max(0.05, 1 - (Control Maturity / 5))
 Residual Risk = Inherent Risk x Reduction Factor
-
+```
 
 **Inherent risk** is the raw danger a risk represents before any protections are considered. **Residual risk** is what's actually left over once existing controls are factored in — this is the number that matters for prioritization, since it reflects real-world exposure, not a hypothetical worst case.
 
@@ -52,13 +53,17 @@ python risk_scoring_tool.py
 3. The tool will print a ranked priority list to the console and export a full report to `risk_priority_report.csv`
 
 ## Example output
+
+```
 RISK PRIORITY RANKING
-No MFA on admin accounts — Residual Risk: 20.0 (Very High)
-Unencrypted backup drive — Residual Risk: 16.0 (High)
-Shared admin passwords — Residual Risk: 12.8 (High)
-Public S3 bucket misconfiguration — Residual Risk: 12.0 (High)
-Unpatched web server — Residual Risk: 9.6 (Moderate)
+------------------------------------------------------------
+1. No MFA on admin accounts — Residual Risk: 20.0 (Very High)
+2. Unencrypted backup drive — Residual Risk: 16.0 (High)
+3. Shared admin passwords — Residual Risk: 12.8 (High)
+4. Public S3 bucket misconfiguration — Residual Risk: 12.0 (High)
+5. Unpatched web server — Residual Risk: 9.6 (Moderate)
 ...
+```
 
 ## Alignment with industry frameworks
 
