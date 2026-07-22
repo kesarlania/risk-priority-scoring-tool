@@ -1,0 +1,11 @@
+name,likelihood,impact,control_maturity
+No MFA on admin accounts,5,5,1
+Unpatched web server,4,4,2
+Weak vendor contract clause,2,3,3
+Unencrypted backup drive,4,5,1
+Shared admin passwords,4,4,1
+No logging on database access,3,4,2
+Outdated antivirus definitions,3,2,3
+No offboarding process for ex-employees,3,4,2
+Public S3 bucket misconfiguration,4,5,2
+Missing data retention policy,2,2,4
